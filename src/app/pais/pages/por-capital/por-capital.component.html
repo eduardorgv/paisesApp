@@ -1,0 +1,21 @@
+<div class="animate__animated animate__fadeIn">
+    <h1>Por Capital</h1>
+    <hr>
+    
+    <div class="row">
+        <div class="col">
+            <app-pais-input (onEnter)="search($event)" (onDebounce)="suggestion($event)" placeholder="Search for a Capital..."></app-pais-input>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="alert alert-danger" *ngIf="error">
+        {{term}} not found
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <app-pais-tabla [countries]="country"></app-pais-tabla>
+    </div>
+</div>

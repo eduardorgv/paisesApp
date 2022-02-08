@@ -1,0 +1,3 @@
+<form (ngSubmit)="search()" autocomplete="off">
+    <input [(ngModel)]="term" (input)="pessKey()" type="text" name="term" class="form-control" [placeholder]="placeholder">
+</form>
